@@ -7,7 +7,7 @@ const createPost = asyncHandler(async (req, res) => {
   const userId = req.user;
   if (!title || !description) {
     res.status(400);
-    throw new Error("Please add all field");
+    throw new Error("Please add all fields");
   }
   const result = await cloudinary.uploader.upload(
     req.file.path,
