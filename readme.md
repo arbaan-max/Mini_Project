@@ -1,3 +1,5 @@
+Complete code is for DockerImage in github Actions
+
 name: Docker Image CI
 
 on:
@@ -20,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t cicd-pipline .
     - name: Push to Dockerhub
-      run: docker push arbaan/cicd-pipline:latest
+      run: docker push arbaan/cicd-pipline: latest
