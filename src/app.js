@@ -17,7 +17,7 @@ app.use("/api/v1/user", userRoutes, postRouter);
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/health", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server Is Running");
 });
 
