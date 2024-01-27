@@ -21,4 +21,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t varsubham/cicd-pipeline .
     - name: Push to Dockerhub
-      run: docker push Arbaan/cicd-pipeline:latest
+      run: docker push arbaan/cicd-pipeline:latest
