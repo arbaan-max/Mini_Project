@@ -1,5 +1,3 @@
-Complete code is for DockerImage in github Actions
-
 name: Docker Image CI
 
 on:
@@ -18,8 +16,8 @@ jobs:
       env: 
           DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
           DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USERNAME -P $DOCKER_PASSWORD
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build -t cicd-pipline .
     - name: Push to Dockerhub
-      run: docker push arbaan/cicd-pipline: latest
+      run: docker push arbaan/cicd-pipline:latest
